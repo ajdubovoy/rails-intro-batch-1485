@@ -1,0 +1,25 @@
+<h1>Contact Us</h1>
+
+<p>We would be glad to hear from you 💌</p>
+
+<form action="/contact">
+  <label for="member">Who do you want to search for?</label>
+  <input
+  type="text"
+  id="member"
+  name="member"
+  value="<%= params[:member] %>"
+  placeholder="Alex">
+  <input type="submit">
+</form>
+
+<p>You are searching for: <%= params[:member] %></p>
+
+<ul>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ul>
+
+<!-- <a href="localhost:3000/about">About Us</a> -->
+<%#= link_to "About Us", about_path %>
